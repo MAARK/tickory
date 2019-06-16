@@ -7,7 +7,9 @@
     "keywords": [
         "tick",
         "time tracking",
-        "cli"
+        "cli",
+        "tickspot",
+        "time entry"
     ],
     "main": "index.js",
     "preferGlobal": true,
