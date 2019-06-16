@@ -1,6 +1,6 @@
 # Tickory
 
-[![Build Status](   Maark/tickory.svg)](https://travis-ci.org/Maark/tickory)
+[![Build Status](https://travis-ci.org/Maark/tickory.svg)](https://travis-ci.org/Maark/tickory)
 [![Dependency Status](https://david-dm.org/MAARK/tickory.svg)](https://david-dm.org/MAARK/tickory)
 [![npm version](https://badge.fury.io/js/tickory.svg)](https://badge.fury.io/js/tickory)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
