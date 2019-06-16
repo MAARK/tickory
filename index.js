@@ -34,7 +34,6 @@ module.exports = () => {
         log.i(`You have entered ${t} total the week of ${util.getStartDateOfCurrentWeek(true)} to ${util.getEndDateOfCurrentWeek(true)}.\n`);
 
         // Main  
-        let response = {};
         const choice = await cliController.getTopMenuResponse(experimentalMode);
         // Enter time 
         if (choice.value === 'today' || choice.value === 'adhoc') {
@@ -53,7 +52,7 @@ module.exports = () => {
                 const s = await dataController.addReoccuringEntries();
                 if (s) {
                     log.i(`Power up! You have successfully entered batch entries for your work week.`);
-                    return true
+                    return true;
                 } else {
                     log.err(`There was a problem adding batch entries. Please check on Tickspot to determine which entries were entered.`);
                     return false;
@@ -68,7 +67,7 @@ module.exports = () => {
         const entry = await cliController.captureEntry(data.clients, (choice.value === 'today'));
         const response = await dataController.createEntry(entry);
         if (response) {
-            log.i(`Power up! You have successfully recorded ${entry.hours} new hours.`)
+            log.i(`Power up! You have successfully recorded ${entry.hours} new hours.`);
             const again = await cliController.addMorePrompt();
             if (again.value) {
                 return await makeEntry(data, choice);
@@ -84,11 +83,11 @@ module.exports = () => {
 
         const cached = await dataController.loadCachedCredentials();
         if (cached) {
-            log.i(`\n🕗 Welcome to Tickory, an unofficial CLI for Tick time tracking.\n`)
+            log.i(`\n🕗 Welcome to Tickory, an unofficial CLI for Tick time tracking.\n`);
             return true;
         }
 
-        log.i(`\n🕗 Welcome to Tickory, an unofficial CLI for Tick time tracking. Before using\nfor the first time, you will need to set up access to Tickspot. Please answer\nthe following questions and then you will be all set!\n`)
+        log.i(`\n🕗 Welcome to Tickory, an unofficial CLI for Tick time tracking. Before using\nfor the first time, you will need to set up access to Tickspot. Please answer\nthe following questions and then you will be all set!\n`);
 
         const user = await cliController.getUserCredentials();
         dataController.updateCredentials(user);
@@ -132,4 +131,4 @@ module.exports = () => {
         }
     })();
 
-}
+};

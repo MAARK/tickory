@@ -29,7 +29,7 @@ class TickController {
         for (let date of dates) {
             for (let entry of entries) {
                 try {
-                    let response = await this.createEntry(date, entry.hours, entry.notes, entry.taskId, userId);
+                    await this.createEntry(date, entry.hours, entry.notes, entry.taskId, userId);
                 } catch (error) {
                     return false;
                 }
@@ -149,10 +149,9 @@ class TickController {
         };
 
         try {
-            const response = await this.tick.createEntry(entry);
+            await this.tick.createEntry(entry);
             return true;
-        } catch (error) {
-            // response[0].errors != null
+        } catch (error) { // response[0].errors != null
             return false;
         }
 

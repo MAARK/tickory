@@ -69,7 +69,6 @@ class DataController {
     }
 
     async _isStaleCache(lastUpdated) {
-        let response = false;
         let lastUpdate = moment(lastUpdated);
         let today = moment();
         let diff = today.diff(lastUpdate, 'days');
@@ -117,7 +116,7 @@ class DataController {
             return await util.writeToFile(this.credentialsFile, this._encryptCredentials());
         } catch (e) {
             log.err(`😱 Something went wrong while saving your Tickspot credentials.`);
-            return data;
+            return e;
         }
     }
 
@@ -269,4 +268,4 @@ class DataController {
 
 }
 
-module.exports = DataController
+module.exports = DataController;
