@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/Maark/tickory.svg)](https://travis-ci.org/Maark/tickory)
 [![Dependency Status](https://david-dm.org/MAARK/tickory.svg)](https://david-dm.org/MAARK/tickory)
-[![npm version](https://badge.fury.io/js/tickory.svg)](https://badge.fury.io/js/tickory)
+[![npm version](https://badge.fury.io/js/https%3A%2Fwww.npmjs.com%2Fpackage%2F%40maarkllc%2Ftickory.svg)](https://badge.fury.io/js/https%3A%2Fwww.npmjs.com%2Fpackage%2F%40maarkllc%2Ftickory)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 An unofficial CLI for [Tick](https://www.tickspot.com/) time tracking, Tickory is designed to allow for rapid time entry into Tickspot in two ways:  
